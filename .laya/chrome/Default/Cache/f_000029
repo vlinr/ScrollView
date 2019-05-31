@@ -1,0 +1,714 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="http://www.this1.cn:80/" />
+ 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="google-site-verification" content="XBZ-NwBjgS1GYnpvk1KgFeRMFnIzlvZDQB4BThHuMak" />
+<meta name="baidu-site-verification" content="7QlIxDFWcH" />
+    <title>首页|微拎录-记录web前端技术问题以及解决办法</title>
+    <meta name="Keywords" content="微拎录,前端技术,代码技术,免费资源,学习社区,学习文档,免费博客,博客资源,文章收录,游戏开发,游戏爱好者,文章分享">
+    <meta name="description" content="微拎录-专注于记录web前端个人开发所遇到的问题以及问题的解决办法，希望可以帮助到更多的开发者，让我们一起成长。">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4501901169795412",
+    enable_page_level_ads: true
+  });
+</script>
+    <!-- 引入样式 -->
+	
+<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_941385_t8ta8p2unxi.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<script src="js/swiper.min.js"></script>
+</head>
+<body>
+	 <header>
+        <section class="headerBox clearFix">
+            <h1>
+
+<a href="http://www.this1.cn/">
+                <img src="img/logo.png" alt="微拎录-记录web前端技术问题以及解>决办法" /> </a>
+            </h1>
+
+            <nav>
+                <a href="" class="active" target="">首页</a>
+                <a href="/bastlove.html" target="">最爱札记</a>
+                <a href="/question.html" target="">学无止境</a>
+                <a href="/my.html" target="">我和作品</a>
+                <a href="/wordmessage.html" target="">给我留言</a>
+            </nav>
+        </section>
+        <div class="mobile">
+            <div class="logo">
+                <img src="img/logo.png" alt="微拎录-记录web前端技术问题以及解决办法">
+            </div>
+            <ul>
+                <li class="active"><a href="">首页</a></li>
+                <li><a href="/bastlove.html">最爱札记</a></li>
+                <li><a href="/question.html">学无止境</a></li>
+                <li><a href="/my.html">我和作品</a></li>
+                <li><a href="/wordmessage.html">给我留言</a></li>
+            </ul>
+            <div class="myInfo">
+               <div class="t">
+                    <div class="t_l" style="background-image: url(http://www.this1.cn:8080/group1/M00/00/00/Co1zqVzrWieAWq3DAABJoyeU4_g445.jpg)"></div>
+                    <div class="t_r">英文名：Keen</div>
+                </div>
+                <div class="m_b">
+                    <div class="l">职业：前端开发</div>
+                    <div class="r">籍贯：四川成都</div>
+                </div>
+                <div class="m_b1">E-mail:zlife@vip.qq.com</div>
+                <div class="m_b1 m_b2">一句话：让优秀成为一种习惯~</div>
+            </div>
+        </div>
+        <div id="open" onclick="myBlog.openMenu(this)" class="">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="serachBtn">
+            <div class="btn"  onclick="myBlog.serachBtnClick(this)" style="background-image: url(img/serach.png)">
+            </div>
+            <div class="s_box">
+                <input type="text" onkeydown="myBlog.serachEnter(this.value)"  placeholder="请输入搜索内容">
+            </div>
+        </div>
+        <div class="n_color"></div>
+    </header>
+    <section class="content">
+        <div class="banner">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper">
+                
+           			
+           				
+	          				<li class="swiper-slide">
+		                       <a href="/detail.html?id=41">
+		                           <div class="imgBox" style="background-image:url(http://www.this1.cn:8080/group1/M00/00/00/Co1zqVzuKtOAZx4cAABePxOspk0276.jpg);">
+		                               <img src="img/zw.png" alt="微拎录|使用Phaser实现尾翼效果">
+		                           </div>
+		                           <span class="">如何使用Phaser3完成简单的尾翼效果</span>
+		                       </a>
+	                   		</li>
+	                
+           				
+	          				<li class="swiper-slide">
+		                       <a href="/detail.html?id=39">
+		                           <div class="imgBox" style="background-image:url(http://www.this1.cn:8080/group1/M00/00/00/Co1zqVzrjrmAO50WAAAyKBOyw4Q369.jpg);">
+		                               <img src="img/zw.png" alt="LayaBox2.0使用Matter物理引擎并适配小游戏">
+		                           </div>
+		                           <span class="">LayaBox2使用Matter物理引擎并适配小游戏</span>
+		                       </a>
+	                   		</li>
+	                
+           				
+	          				<li class="swiper-slide">
+		                       <a href="/detail.html?id=38">
+		                           <div class="imgBox" style="background-image:url(http://www.this1.cn:8080/group1/M00/00/00/Co1zqVzrezKAW43jAADjX5ln0iw101.png);">
+		                               <img src="img/zw.png" alt="使用LayaBox2.0实现微信小游戏好友排行|微拎录">
+		                           </div>
+		                           <span class="">如何使用LayaBox2.0制作微信小游戏好友排行</span>
+		                       </a>
+	                   		</li>
+	                
+           				
+	          				<li class="swiper-slide">
+		                       <a href="/detail.html?id=9">
+		                           <div class="imgBox" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/e19706b3-472f-4f60-860c-c8e46855414f1552059613604.image/png);">
+		                               <img src="img/zw.png" alt="linux安装nginx">
+		                           </div>
+		                           <span class="">linux安装nginx</span>
+		                       </a>
+	                   		</li>
+	                
+           				
+	          				<li class="swiper-slide">
+		                       <a href="/detail.html?id=5">
+		                           <div class="imgBox" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/4c52c04b-cec4-455e-9e3e-b3b8c7649d241552035179055.image/png);">
+		                               <img src="img/zw.png" alt="Fastdfs上传图片测试">
+		                           </div>
+		                           <span class="">Fastdfs上传图片测试</span>
+		                       </a>
+	                   		</li>
+	                
+           				
+	          				<li class="swiper-slide">
+		                       <a href="/detail.html?id=4">
+		                           <div class="imgBox" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/ae9b7cba-14e9-4d5d-a2c3-f550a4eabcf61552033267853.image/png);">
+		                               <img src="img/zw.png" alt="FastDFS+Nginx实现文件服务器">
+		                           </div>
+		                           <span class="">FastDFS+Nginx实现文件服务器</span>
+		                       </a>
+	                   		</li>
+	                
+           				
+	          				<li class="swiper-slide">
+		                       <a href="/detail.html?id=3">
+		                           <div class="imgBox" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/2ae86c0d-0537-42d5-b6b0-01bf5d891d0b1552031671034.image/png);">
+		                               <img src="img/zw.png" alt="FastDFS简介">
+		                           </div>
+		                           <span class="">FastDFS简介<一></span>
+		                       </a>
+	                   		</li>
+	                
+                    
+                </ul>
+                <div class="swiper-button-prev"></div>
+                <!--左箭头-->
+                <div class="swiper-button-next"></div>
+                <!--右箭头-->
+            </div>
+        </div>
+        <div class="center ">
+            <div class="cbox clearFix">
+                <div class="left">
+		<div class="lbox">
+
+	<h2 class="title">绿色展示</h2>
+<div class="googleMobile">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 精简短文 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4501901169795412"
+     data-ad-slot="3306263657"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<div class="googleAd">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 精简短文PC -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4501901169795412"
+     data-ad-slot="4151128381"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+</div>
+                    <div class="lbox">
+                        <h2 class="title">精简短文</h2>
+                        <div class="r_list">
+                            <ul>
+                            	
+			           				
+	           						<li>
+			          				<a href="/detail.html?id=12">
+                                        <div class="hideImg">
+                                            <div class="r_limg" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/bbc26e28-344d-4d60-909f-fdd5f04c2c341552569131276.image/jpeg);">
+                                                <img src="img/zw.png" alt="常用SQL优化方法">
+                                            </div>
+                                        </div>
+                                        <h3>常用SQL优化方法</h3>
+                                        <div class="r_txt">应尽可能的避免更新 clustered 索引数据列，因为clustered 索引数据列的顺...</div>
+                                        <span>+ 阅读更多</span>
+                                    </a>
+                                    </li>
+				                   	
+								
+			           				
+	           						<li>
+			          				<a href="/detail.html?id=11">
+                                        <div class="hideImg">
+                                            <div class="r_limg" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/181fa63b-ca70-4408-9824-75e4926c9eca1552567969398.image/png);">
+                                                <img src="img/zw.png" alt="负载均衡方案">
+                                            </div>
+                                        </div>
+                                        <h3>负载均衡方案<一></h3>
+                                        <div class="r_txt">一台普通服务器的处理能力是有限的，假如能达到每秒几万个到几十万个请求，但却无法在一秒钟内处...</div>
+                                        <span>+ 阅读更多</span>
+                                    </a>
+                                    </li>
+				                   	
+								
+			           				
+	           						<li>
+			          				<a href="/detail.html?id=2">
+                                        <div class="hideImg">
+                                            <div class="r_limg" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/9f0c0db2-66aa-48eb-b9e4-9823e5b992381551927977986.image/jpeg);">
+                                                <img src="img/zw.png" alt="Dubbo实现原理">
+                                            </div>
+                                        </div>
+                                        <h3>Dubbo实现原理的概述</h3>
+                                        <div class="r_txt">Dubbo是阿里巴巴开源出来的一个分布式服务框架，致力于提供高性能和透明化的RPC远程服务...</div>
+                                        <span>+ 阅读更多</span>
+                                    </a>
+                                    </li>
+				                   	
+								
+                            </ul>
+                        </div>
+                    </div>
+<div class="lbox baiduAD" >
+	<h2 class="title">绿色推荐</h2>
+	<script type="text/javascript">
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div style="" id="' + s + '"></div>');
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u3851599",
+            container:  s
+        });
+    })();
+</script>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js" async="async" defer="defer" ></script>
+
+</div>
+<div class="lbox baiduMobile" >
+        <h2 class="title">绿色推荐</h2>
+<script type="text/javascript">
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div style="" id="' + s + '"></div>');
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u3851697",
+            container:  s
+        });
+    })();
+</script>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js" async="async" defer="defer" ></script>
+
+</div>
+                    <div class="lbox" id="pageIndex">
+                       <h2 class="title">札记推荐</h2>
+                        <div class="n_list">
+                            <ul>
+<li class="baiduMobile" >
+<script type="text/javascript">
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div style="" id="' + s + '"></div>');
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u3851595",
+            container:  s
+        });
+    })();
+</script>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js" async="async" defer="defer" ></script>
+
+</li>
+				<li class="baiduAD">
+	<script type="text/javascript">
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div style="" id="' + s + '"></div>');
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u3851585",
+            container:  s
+        });
+    })();
+</script>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/c.js" async="async" defer="defer" ></script>
+
+</li>
+		                           
+			           						<li>
+			           							<a href="/detail.html?id=14">
+				                                   <h3>负载均衡方案<二></h3>
+				                                   <div class="n_center">
+				                                       <div class="hideImg">
+				                                           <div class="n_limg" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/71a71d6c-0815-4a8b-894d-3283a3881b6c1552615087043.image/png);">
+				                                               <img src="img/zw.png" alt="负载均衡方案">
+				                                           </div>
+				                                       </div>
+				                                       <div class="n_txt">LVS是Linux Virtual Server的简写，意即Linux虚拟服务器，是一个虚拟的服务器集群系统。本项目在1998年5月由章文嵩博士成立，是中国国内最早出现的自由软件项目之一。这里介绍了LVS的安装与配置 , 怎么搭建一个四层负载</div>
+				                                   </div>
+				                                   <div class="n_tag">
+				                                       <span class="n_tagC">
+				                                           <i class="iconfont icon-biaoqian"></i>
+				                                           <b>linux</b>
+				                                       </span>
+				                                       <span class="n_tagT">
+				                                           <i class="iconfont icon-shijian"></i>
+				                                           <b>Fri Mar 15 09:58:11 CST 2019</b>
+				                                       </span>
+				                                       <span class="n_tagL">
+				                                           <i class="iconfont icon-liulan"></i>
+				                                           <b>
+				                                               	浏览（
+				                                               <span class="n_look">29</span>）
+				                                           </b>
+				                                       </span>
+				                                       <span class="n_tagLi">
+				                                           <i class="iconfont icon-xihuan"></i>
+				                                           <b>
+				                                               	喜欢（
+				                                               <span class="n_like">26</span>）
+				                                           </b>
+				                                       </span>
+				                                       <span class="n_tagMore">
+				                                           <b>阅读更多</b>
+				                                           <i class="iconfont icon-gengduo"></i>
+				                                       </span>
+				                                   </div>
+			                                   </a>
+			                               </li>
+				                   		
+			           						<li>
+			           							<a href="/detail.html?id=13">
+				                                   <h3>Linux的10个最危险的命令</h3>
+				                                   <div class="n_center">
+				                                       <div class="hideImg">
+				                                           <div class="n_limg" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/29d2aa51-7aeb-4413-a4ee-c58124ea35e01552570267854.image/jpeg);">
+				                                               <img src="img/zw.png" alt="Linux的10个最危险的命令">
+				                                           </div>
+				                                       </div>
+				                                       <div class="n_txt">Linux命令行佷有用、很高效，也很有趣，但有时候也很危险，尤其是在你不确定你自己在正在做什么时候。</div>
+				                                   </div>
+				                                   <div class="n_tag">
+				                                       <span class="n_tagC">
+				                                           <i class="iconfont icon-biaoqian"></i>
+				                                           <b>Linux</b>
+				                                       </span>
+				                                       <span class="n_tagT">
+				                                           <i class="iconfont icon-shijian"></i>
+				                                           <b>Thu Mar 14 21:31:13 CST 2019</b>
+				                                       </span>
+				                                       <span class="n_tagL">
+				                                           <i class="iconfont icon-liulan"></i>
+				                                           <b>
+				                                               	浏览（
+				                                               <span class="n_look">47</span>）
+				                                           </b>
+				                                       </span>
+				                                       <span class="n_tagLi">
+				                                           <i class="iconfont icon-xihuan"></i>
+				                                           <b>
+				                                               	喜欢（
+				                                               <span class="n_like">21</span>）
+				                                           </b>
+				                                       </span>
+				                                       <span class="n_tagMore">
+				                                           <b>阅读更多</b>
+				                                           <i class="iconfont icon-gengduo"></i>
+				                                       </span>
+				                                   </div>
+			                                   </a>
+			                               </li>
+				                   		
+			           						<li>
+			           							<a href="/detail.html?id=1">
+				                                   <h3>nginx反向代理400错误</h3>
+				                                   <div class="n_center">
+				                                       <div class="hideImg">
+				                                           <div class="n_limg" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/9c1021d8-0f12-4b3f-aa0e-4723246038231551882029825.image/jpeg);">
+				                                               <img src="img/zw.png" alt="nginx服务器">
+				                                           </div>
+				                                       </div>
+				                                       <div class="n_txt">nginx反向代理400错误</div>
+				                                   </div>
+				                                   <div class="n_tag">
+				                                       <span class="n_tagC">
+				                                           <i class="iconfont icon-biaoqian"></i>
+				                                           <b>我的bug</b>
+				                                       </span>
+				                                       <span class="n_tagT">
+				                                           <i class="iconfont icon-shijian"></i>
+				                                           <b>Wed Mar 06 22:20:33 CST 2019</b>
+				                                       </span>
+				                                       <span class="n_tagL">
+				                                           <i class="iconfont icon-liulan"></i>
+				                                           <b>
+				                                               	浏览（
+				                                               <span class="n_look">103</span>）
+				                                           </b>
+				                                       </span>
+				                                       <span class="n_tagLi">
+				                                           <i class="iconfont icon-xihuan"></i>
+				                                           <b>
+				                                               	喜欢（
+				                                               <span class="n_like">13</span>）
+				                                           </b>
+				                                       </span>
+				                                       <span class="n_tagMore">
+				                                           <b>阅读更多</b>
+				                                           <i class="iconfont icon-gengduo"></i>
+				                                       </span>
+				                                   </div>
+			                                   </a>
+			                               </li>
+				                   		
+							<li class="googleAd">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 主页自适应 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4501901169795412"
+     data-ad-slot="8910708465"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</li>
+<li class="googleMobile">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-bp+6z+1g-3n+5e"
+     data-ad-client="ca-pub-4501901169795412"
+     data-ad-slot="6061183847"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</li>
+                            </ul>
+                            <div id="page">
+                                <a href="javascript:void(0);" >
+                                    <i class="iconfont icon-shang"></i>
+                                </a>
+                                
+	                                	 <a href="/?size=1" >
+		                                    <span>1</span>
+		                                 </a>
+                                
+	                                	 <a href="/?size=2" >
+		                                    <span>2</span>
+		                                 </a>
+                                
+                                <a href="javascript:void(0);" >
+                                    <i class="iconfont icon-shang"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="rbox">
+                        <h2 class="title1">
+                            <span>我的信息</span>
+                        </h2>
+                        <div class="a_con">
+                            <!--解决设置背景不显示问题-->
+                            <div class="a_head" style="background-image:url(http://www.this1.cn:8080/group1/M00/00/00/Co1zqVzrWieAWq3DAABJoyeU4_g445.jpg)">
+                            </div>
+                            <ul>
+                                <li>英文名：Keen</li>
+                                <li>职业：前端开发</li>
+                                <li>籍贯：四川成都</li>
+                                <li>E-mail:zlife@vip.qq.com</li>
+                                <li>一句话：让优秀成为一种习惯~</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="serach" class="rbox">
+	                    <div class="s_box">
+	                        <input type="text" onkeydown="myBlog.serachEnter(this.value)"  name="keyword" placeholder="请输入搜索关键词"
+	                            onkeyup="this.value=this.value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')" value="" />
+	                       <button
+	                            onclick="myBlog.serach(document.querySelector('#serach').children[0].children[0].value)">搜索</button>
+	                    </div>
+	                </div>
+                    <div class="rbox">
+                        <h2 class="title1">
+                            <span>阅读排行</span>
+                        </h2>
+                        <div class="r_box">
+                            <ul>
+<li>
+<script type="text/javascript">
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div style="" id="' + s + '"></div>');
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u3851805",
+            container:  s
+        });
+    })();
+</script>
+</li>
+                            	
+                            		<li>
+	                                    <a href="/detail.html?id=38">
+	                                        <h3>如何使用LayaBox2.0制作微信小游戏好友排行</h3>
+	                                        <div class="r_img">
+	                                            <img src="http://www.this1.cn:8080/group1/M00/00/00/Co1zqVzrezKAW43jAADjX5ln0iw101.png">
+	                                        </div>
+	                                        <div class="r_txt">本篇文章将从0到1使用LayaBox2.x去实现微信小游戏好友排行，其中会整理LayaBox2.0展示好友数据的方法以及制作好友排行的整个流程。</div>
+	                                    </a>
+	                                </li>
+                            	
+                            		<li>
+	                                    <a href="/detail.html?id=18">
+	                                        <h3>Redis5集群的搭建二</h3>
+	                                        <div class="r_img">
+	                                            <img src="https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/f53352fb-8b0b-42a7-a68e-4437f49476751552713409533.image/jpeg">
+	                                        </div>
+	                                        <div class="r_txt">Redis5搭建集群的安装 以及redis.conf的配置详解 , redis5的集群搭建</div>
+	                                    </a>
+	                                </li>
+                            	
+                            		<li>
+	                                    <a href="/detail.html?id=2">
+	                                        <h3>Dubbo实现原理的概述</h3>
+	                                        <div class="r_img">
+	                                            <img src="https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/9f0c0db2-66aa-48eb-b9e4-9823e5b992381551927977986.image/jpeg">
+	                                        </div>
+	                                        <div class="r_txt">Dubbo是阿里巴巴开源出来的一个分布式服务框架，致力于提供高性能和透明化的RPC远程服务调用方案，以及作为SOA服务治理的方案</div>
+	                                    </a>
+	                                </li>
+                            	
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rbox">
+                        <h2 class="title1">
+                            <span>站长推荐</span>
+                        </h2>
+                        <div class="r_box">
+                            <ul>
+                            	
+                            		<li>
+	                                    <a href="/detail.html?id=15">
+	                                        <h3>sql语句合集大全</h3>
+	                                        <div class="r_img">
+	                                            <img src="https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/9f569025-4f03-4306-8df4-b223fe068db61552624238359.image/jpeg">
+	                                        </div>
+	                                        <div class="r_txt">结构化查询语言(Structured Query Language)简称SQL，...</div>
+	                                    </a>
+	                                </li>
+                            	
+                            		<li>
+	                                    <a href="/detail.html?id=11">
+	                                        <h3>负载均衡方案<一></h3>
+	                                        <div class="r_img">
+	                                            <img src="https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/181fa63b-ca70-4408-9824-75e4926c9eca1552567969398.image/png">
+	                                        </div>
+	                                        <div class="r_txt">一台普通服务器的处理能力是有限的，假如能达到每秒几万个到几十万个请求，但却无法在...</div>
+	                                    </a>
+	                                </li>
+                            	
+                            		<li>
+	                                    <a href="/detail.html?id=2">
+	                                        <h3>Dubbo实现原理的概述</h3>
+	                                        <div class="r_img">
+	                                            <img src="https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/9f0c0db2-66aa-48eb-b9e4-9823e5b992381551927977986.image/jpeg">
+	                                        </div>
+	                                        <div class="r_txt">Dubbo是阿里巴巴开源出来的一个分布式服务框架，致力于提供高性能和透明化的RP...</div>
+	                                    </a>
+	                                </li>
+                            	
+<li>
+<script type="text/javascript">
+    (function() {
+        var s = "_" + Math.random().toString(36).slice(2);
+        document.write('<div style="" id="' + s + '"></div>');
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u3851805",
+            container:  s
+        });
+    })();
+</script>
+</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="rbox" id="friend">
+                        <h2 class="title1">
+                            <span>友情链接</span>
+                        </h2>
+                        <ul>
+                        	
+                          		 <li>
+                              		<a href="http://www.this1.cn/">微拎录</a>
+                          		 </li>
+                            
+                          		 <li>
+                              		<a href="http://hao.360.cn/">360导航</a>
+                          		 </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="rbox" id="qrcode">
+                        <h2 class="title1">
+                            <span>打赏一下</span>
+                        </h2>
+                        <div class="q_img">
+                            <img src="http://www.this1.cn:8080/group1/M00/00/00/Co1zqVzrWiiAOhE3AADDmkZD1mw004.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    
+<footer id="footer">
+    <p>Copyright © 2019 , this1.cn, All Rights Reserved 备案号:蜀ICP备17000691号</p>
+</footer>
+<section id="toast" class="">
+
+</section>
+<div id="goTop" class="" title="回到顶部">
+    <i class="iconfont icon-huidingbu"></i>
+</div>
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<script type="text/javascript">
+    (function() {
+        var s ="_fpffwq4n0n9";// "_" + Math.random().toString(36).slice(2);
+        document.write('<div style="" id="_fpffwq4n0n9"></div>');
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u3851593",
+            container:  s
+        });
+    })();
+</script>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js" async="async" defer="defer" ></script>
+
+<script>
+(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?b96a0010f33821ca927c4af09263e671":"https://jspassport.ssl.qhimg.com/11.0.1.js?b96a0010f33821ca927c4af09263e671";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?60ab06b7e6e3873e27dc75c268d775c7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+	<script src="js/main.js" id="scriptType"  page='home'></script>	
+</body>
+</html>
+
+

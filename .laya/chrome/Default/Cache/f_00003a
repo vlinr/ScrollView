@@ -1,0 +1,585 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="http://www.this1.cn:80/" />
+ 	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>学无止境|微拎录-记录web前端技术问题以及解决办法</title>
+    <meta name="Keywords" content="微拎录,前端技术,代码技术,免费资源,学习社区,学习文档,免费博客,博客资源,文章收录,游戏开发,游戏爱好者,文章分享">
+    <meta name="description" content="微拎录-专注于记录web前端个人开发所遇到的问题以及问题的解决办法，希望可以帮助到更多的开发者，让我们一起成长。">
+    <!-- 引入样式 -->
+
+<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_941385_t8ta8p2unxi.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<script src="js/swiper.min.js"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-4501901169795412",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+<body>
+	<header>
+        <section class="headerBox clearFix">
+      <h1>
+
+<a href="http://www.this1.cn/">
+                <img src="img/logo.png" alt="微拎录-记录web前端技术问题以及解>决办法" /> </a>
+            </h1>
+
+           <nav>
+                <a href=""  target="">首页</a>
+                <a href="/bastlove.html" target="">最爱札记</a>
+                <a  class="active"  href="/question.html" target="">学无止境</a>
+                <a href="/my.html" target="">我和作品</a>
+                <a href="/wordmessage.html" target="">给我留言</a>
+            </nav>
+        </section>
+        <div class="mobile">
+            <div class="logo">
+                <img src="img/logo.png" alt="微拎录-记录web前端技术问题以及解决办法">
+            </div>
+            <ul>
+                <li ><a href="">首页</a></li>
+                <li><a href="/bastlove.html">最爱札记</a></li>
+                <li  class="active" ><a href="/question.html">学无止境</a></li>
+                <li><a href="/my.html">我和作品</a></li>
+                <li><a href="/wordmessage.html">给我留言</a></li>
+            </ul>
+            <div class="myInfo">
+                <div class="t">
+                    <div class="t_l" style="background-image: url(http://www.this1.cn:8080/group1/M00/00/00/Co1zqVzrWieAWq3DAABJoyeU4_g445.jpg)"></div>
+                    <div class="t_r">英文名：Keen</div>
+                </div>
+                <div class="m_b">
+                    <div class="l">职业：前端开发</div>
+                    <div class="r">籍贯：四川成都</div>
+                </div>
+                <div class="m_b1">E-mail:zlife@vip.qq.com</div>
+                <div class="m_b1 m_b2">一句话：让优秀成为一种习惯~</div>
+            </div>
+        </div>
+        <div id="open" onclick="myBlog.openMenu(this)" class="">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="serachBtn">
+            <div class="btn"  onclick="myBlog.serachBtnClick(this)" style="background-image: url(img/serach.png)">
+            </div>
+            <div class="s_box">
+                <input type="text" onkeydown="myBlog.serachEnter(this.value)" placeholder="请输入搜索内容">
+            </div>
+        </div>
+        <div class="n_color"></div>
+    </header>
+    <div class="center ">
+        <div class="cbox clearFix">
+            <div class="left top25">
+                <div class="lbox" id="pageIndex">
+                    <h2 class="title">问题之路</h2>
+                    <div class="n_list">
+                        <ul>
+                            
+           						<li>
+           							<a href="/detail.html?id=26">
+	                                   <h3>你必知必会的SQL语句练习</h3>
+	                                   <div class="n_center">
+	                                       <div class="hideImg">
+	                                           <div class="n_limg" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/dd8aba50-178d-4007-a93b-fc77ef15d2de1553687512711.image/jpeg);">
+	                                               <img src="img/zw.png" alt="SQL语句练习">
+	                                           </div>
+	                                       </div>
+	                                       <div class="n_txt">本文是在Cat Qi的参考原帖的基础之上经本人一题一题练习后编辑而成，非原创，仅润色而已。另外，本文所列题目的解法并非只有一种，本文只是给出比较普通的一种而已，也希望各位园友能够自由发挥。</div>
+	                                   </div>
+	                                   <div class="n_tag">
+	                                       <span class="n_tagC">
+	                                           <i class="iconfont icon-biaoqian"></i>
+	                                           <b>sql</b>
+	                                       </span>
+	                                       <span class="n_tagT">
+	                                           <i class="iconfont icon-shijian"></i>
+	                                           <b>Wed Mar 27 19:52:01 CST 2019</b>
+	                                       </span>
+	                                       <span class="n_tagL">
+	                                           <i class="iconfont icon-liulan"></i>
+	                                           <b>
+	                                               	浏览（
+	                                               <span class="n_look">77</span>）
+	                                           </b>
+	                                       </span>
+	                                       <span class="n_tagLi">
+	                                           <i class="iconfont icon-xihuan"></i>
+	                                           <b>
+	                                               	喜欢（
+	                                               <span class="n_like">30</span>）
+	                                           </b>
+	                                       </span>
+	                                       <span class="n_tagMore">
+	                                           <b>阅读更多</b>
+	                                           <i class="iconfont icon-gengduo"></i>
+	                                       </span>
+	                                   </div>
+	                                  </a>
+                               </li>
+	                   		
+           						<li>
+           							<a href="/detail.html?id=25">
+	                                   <h3>java发红包算法</h3>
+	                                   <div class="n_center">
+	                                       <div class="hideImg">
+	                                           <div class="n_limg" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/09e48692-69b5-47c9-9213-151d03af113c1553687087705.image/jpeg);">
+	                                               <img src="img/zw.png" alt="java发红包算法">
+	                                           </div>
+	                                       </div>
+	                                       <div class="n_txt">java发红包算法</div>
+	                                   </div>
+	                                   <div class="n_tag">
+	                                       <span class="n_tagC">
+	                                           <i class="iconfont icon-biaoqian"></i>
+	                                           <b>java</b>
+	                                       </span>
+	                                       <span class="n_tagT">
+	                                           <i class="iconfont icon-shijian"></i>
+	                                           <b>Wed Mar 27 19:44:52 CST 2019</b>
+	                                       </span>
+	                                       <span class="n_tagL">
+	                                           <i class="iconfont icon-liulan"></i>
+	                                           <b>
+	                                               	浏览（
+	                                               <span class="n_look">58</span>）
+	                                           </b>
+	                                       </span>
+	                                       <span class="n_tagLi">
+	                                           <i class="iconfont icon-xihuan"></i>
+	                                           <b>
+	                                               	喜欢（
+	                                               <span class="n_like">31</span>）
+	                                           </b>
+	                                       </span>
+	                                       <span class="n_tagMore">
+	                                           <b>阅读更多</b>
+	                                           <i class="iconfont icon-gengduo"></i>
+	                                       </span>
+	                                   </div>
+	                                  </a>
+                               </li>
+	                   		
+           						<li>
+           							<a href="/detail.html?id=24">
+	                                   <h3>java实现简单的搜索引擎</h3>
+	                                   <div class="n_center">
+	                                       <div class="hideImg">
+	                                           <div class="n_limg" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/9bf9611c-867a-4200-b232-99e73ceb551a1553686830699.image/jpeg);">
+	                                               <img src="img/zw.png" alt="java实现简单的搜索引擎">
+	                                           </div>
+	                                       </div>
+	                                       <div class="n_txt">搜索引擎里面的分词采用的是字符分词，对汉语的处理还是挺不错的，但是对英文的处理就很弱。</div>
+	                                   </div>
+	                                   <div class="n_tag">
+	                                       <span class="n_tagC">
+	                                           <i class="iconfont icon-biaoqian"></i>
+	                                           <b>java</b>
+	                                       </span>
+	                                       <span class="n_tagT">
+	                                           <i class="iconfont icon-shijian"></i>
+	                                           <b>Wed Mar 27 19:40:43 CST 2019</b>
+	                                       </span>
+	                                       <span class="n_tagL">
+	                                           <i class="iconfont icon-liulan"></i>
+	                                           <b>
+	                                               	浏览（
+	                                               <span class="n_look">86</span>）
+	                                           </b>
+	                                       </span>
+	                                       <span class="n_tagLi">
+	                                           <i class="iconfont icon-xihuan"></i>
+	                                           <b>
+	                                               	喜欢（
+	                                               <span class="n_like">26</span>）
+	                                           </b>
+	                                       </span>
+	                                       <span class="n_tagMore">
+	                                           <b>阅读更多</b>
+	                                           <i class="iconfont icon-gengduo"></i>
+	                                       </span>
+	                                   </div>
+	                                  </a>
+                               </li>
+	                   		
+           						<li>
+           							<a href="/detail.html?id=23">
+	                                   <h3>fastdfs使用nginx出现的问题</h3>
+	                                   <div class="n_center">
+	                                       <div class="hideImg">
+	                                           <div class="n_limg" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/4913a4d4-95d9-4e2b-b191-2c861f6ecf6e1553685511637.image/jpeg);">
+	                                               <img src="img/zw.png" alt="fastdfs使用nginx出现的问题">
+	                                           </div>
+	                                       </div>
+	                                       <div class="n_txt">fastdfs使用nginx出现的问题 make的时候会报一下错误</div>
+	                                   </div>
+	                                   <div class="n_tag">
+	                                       <span class="n_tagC">
+	                                           <i class="iconfont icon-biaoqian"></i>
+	                                           <b>linux</b>
+	                                       </span>
+	                                       <span class="n_tagT">
+	                                           <i class="iconfont icon-shijian"></i>
+	                                           <b>Wed Mar 27 19:18:35 CST 2019</b>
+	                                       </span>
+	                                       <span class="n_tagL">
+	                                           <i class="iconfont icon-liulan"></i>
+	                                           <b>
+	                                               	浏览（
+	                                               <span class="n_look">89</span>）
+	                                           </b>
+	                                       </span>
+	                                       <span class="n_tagLi">
+	                                           <i class="iconfont icon-xihuan"></i>
+	                                           <b>
+	                                               	喜欢（
+	                                               <span class="n_like">31</span>）
+	                                           </b>
+	                                       </span>
+	                                       <span class="n_tagMore">
+	                                           <b>阅读更多</b>
+	                                           <i class="iconfont icon-gengduo"></i>
+	                                       </span>
+	                                   </div>
+	                                  </a>
+                               </li>
+	                   		
+           						<li>
+           							<a href="/detail.html?id=10">
+	                                   <h3>sql语句</h3>
+	                                   <div class="n_center">
+	                                       <div class="hideImg">
+	                                           <div class="n_limg" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/d3fbee2b-87e0-4c2a-8b3e-81dee8c935f61552566654788.image/jpeg);">
+	                                               <img src="img/zw.png" alt="sql语句">
+	                                           </div>
+	                                       </div>
+	                                       <div class="n_txt">sql语句<一></div>
+	                                   </div>
+	                                   <div class="n_tag">
+	                                       <span class="n_tagC">
+	                                           <i class="iconfont icon-biaoqian"></i>
+	                                           <b>sql</b>
+	                                       </span>
+	                                       <span class="n_tagT">
+	                                           <i class="iconfont icon-shijian"></i>
+	                                           <b>Thu Mar 14 20:40:47 CST 2019</b>
+	                                       </span>
+	                                       <span class="n_tagL">
+	                                           <i class="iconfont icon-liulan"></i>
+	                                           <b>
+	                                               	浏览（
+	                                               <span class="n_look">50</span>）
+	                                           </b>
+	                                       </span>
+	                                       <span class="n_tagLi">
+	                                           <i class="iconfont icon-xihuan"></i>
+	                                           <b>
+	                                               	喜欢（
+	                                               <span class="n_like">25</span>）
+	                                           </b>
+	                                       </span>
+	                                       <span class="n_tagMore">
+	                                           <b>阅读更多</b>
+	                                           <i class="iconfont icon-gengduo"></i>
+	                                       </span>
+	                                   </div>
+	                                  </a>
+                               </li>
+	                   		
+           						<li>
+           							<a href="/detail.html?id=8">
+	                                   <h3>java Date工具类</h3>
+	                                   <div class="n_center">
+	                                       <div class="hideImg">
+	                                           <div class="n_limg" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/758463a6-7600-4ecd-be24-4420d246e1351552038724898.image/jpeg);">
+	                                               <img src="img/zw.png" alt="java Date工具类">
+	                                           </div>
+	                                       </div>
+	                                       <div class="n_txt">这里是一些常用的一些java 处理时间的工具类</div>
+	                                   </div>
+	                                   <div class="n_tag">
+	                                       <span class="n_tagC">
+	                                           <i class="iconfont icon-biaoqian"></i>
+	                                           <b>java</b>
+	                                       </span>
+	                                       <span class="n_tagT">
+	                                           <i class="iconfont icon-shijian"></i>
+	                                           <b>Fri Mar 08 17:52:29 CST 2019</b>
+	                                       </span>
+	                                       <span class="n_tagL">
+	                                           <i class="iconfont icon-liulan"></i>
+	                                           <b>
+	                                               	浏览（
+	                                               <span class="n_look">196</span>）
+	                                           </b>
+	                                       </span>
+	                                       <span class="n_tagLi">
+	                                           <i class="iconfont icon-xihuan"></i>
+	                                           <b>
+	                                               	喜欢（
+	                                               <span class="n_like">18</span>）
+	                                           </b>
+	                                       </span>
+	                                       <span class="n_tagMore">
+	                                           <b>阅读更多</b>
+	                                           <i class="iconfont icon-gengduo"></i>
+	                                       </span>
+	                                   </div>
+	                                  </a>
+                               </li>
+	                   		
+           						<li>
+           							<a href="/detail.html?id=7">
+	                                   <h3>strtus 处理跨域</h3>
+	                                   <div class="n_center">
+	                                       <div class="hideImg">
+	                                           <div class="n_limg" style="background-image:url(https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/d1bb932a-7653-4912-895b-9c8939d204ef1552037989611.image/jpeg);">
+	                                               <img src="img/zw.png" alt="strtus 处理跨域">
+	                                           </div>
+	                                       </div>
+	                                       <div class="n_txt">这里我使用到了百度的富文本编辑器(ueditor) 与strtus整合的时候ueditor的文件上传会被strtus拦截  , 处理方式如代码</div>
+	                                   </div>
+	                                   <div class="n_tag">
+	                                       <span class="n_tagC">
+	                                           <i class="iconfont icon-biaoqian"></i>
+	                                           <b>java</b>
+	                                       </span>
+	                                       <span class="n_tagT">
+	                                           <i class="iconfont icon-shijian"></i>
+	                                           <b>Fri Mar 08 17:40:00 CST 2019</b>
+	                                       </span>
+	                                       <span class="n_tagL">
+	                                           <i class="iconfont icon-liulan"></i>
+	                                           <b>
+	                                               	浏览（
+	                                               <span class="n_look">134</span>）
+	                                           </b>
+	                                       </span>
+	                                       <span class="n_tagLi">
+	                                           <i class="iconfont icon-xihuan"></i>
+	                                           <b>
+	                                               	喜欢（
+	                                               <span class="n_like">16</span>）
+	                                           </b>
+	                                       </span>
+	                                       <span class="n_tagMore">
+	                                           <b>阅读更多</b>
+	                                           <i class="iconfont icon-gengduo"></i>
+	                                       </span>
+	                                   </div>
+	                                  </a>
+                               </li>
+	                   		
+
+                        </ul>
+                        <div id="page">
+                            <a href="javascript:void(0);" >
+                                <i class="iconfont icon-shang"></i>
+                            </a>
+                            
+                             	 <a href="/question.html?size=1" >
+                                  <span>1</span>
+                               	</a>
+                            
+                             	 <a href="/question.html?size=2" >
+                                  <span>2</span>
+                               	</a>
+                            
+                            <a href="javascript:void(0);" >
+                                <i class="iconfont icon-shang"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div id="serach" class="rbox">
+                    <div class="s_box">
+                        <input type="text" onkeydown="myBlog.serachEnter(this.value)"  name="keyword" placeholder="请输入搜索关键词"
+                            onkeyup="this.value=this.value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g,'')" value="" />
+                       <button
+                            onclick="myBlog.serach(document.querySelector('#serach').children[0].children[0].value)">搜索</button>
+                    </div>
+                </div>
+                <div class="rbox">
+                    <h2 class="title1">
+                        <span>阅读排行</span>
+                    </h2>
+                    <div class="r_box">
+                        <ul>
+                            
+                           		<li>
+                                    <a href="/detail.html?id=38">
+                                        <h3>如何使用LayaBox2.0制作微信小游戏好友排行</h3>
+                                        <div class="r_img">
+                                            <img src="http://www.this1.cn:8080/group1/M00/00/00/Co1zqVzrezKAW43jAADjX5ln0iw101.png">
+                                        </div>
+                                        <div class="r_txt">本篇文章将从0到1使用LayaBox2.x去实现微信小游戏好友排行，其中会整理LayaBox2.0展示好友数据的方法以及制作好友排行的整个流程。</div>
+                                    </a>
+                                </li>
+                           	
+                           		<li>
+                                    <a href="/detail.html?id=18">
+                                        <h3>Redis5集群的搭建二</h3>
+                                        <div class="r_img">
+                                            <img src="https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/f53352fb-8b0b-42a7-a68e-4437f49476751552713409533.image/jpeg">
+                                        </div>
+                                        <div class="r_txt">Redis5搭建集群的安装 以及redis.conf的配置详解 , redis5的集群搭建</div>
+                                    </a>
+                                </li>
+                           	
+                           		<li>
+                                    <a href="/detail.html?id=2">
+                                        <h3>Dubbo实现原理的概述</h3>
+                                        <div class="r_img">
+                                            <img src="https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/9f0c0db2-66aa-48eb-b9e4-9823e5b992381551927977986.image/jpeg">
+                                        </div>
+                                        <div class="r_txt">Dubbo是阿里巴巴开源出来的一个分布式服务框架，致力于提供高性能和透明化的RPC远程服务调用方案，以及作为SOA服务治理的方案</div>
+                                    </a>
+                                </li>
+                           	
+                        </ul>
+                    </div>
+                </div>
+                <div class="rbox">
+                    <h2 class="title1">
+                        <span>站长推荐</span>
+                    </h2>
+                    <div class="r_box">
+                        <ul>
+                            
+                          		<li>
+                                   <a href="/detail.html?id=15">
+                                       <h3>sql语句合集大全</h3>
+                                       <div class="r_img">
+                                           <img src="https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/9f569025-4f03-4306-8df4-b223fe068db61552624238359.image/jpeg">
+                                       </div>
+                                       <div class="r_txt">结构化查询语言(Structured Query Language)简称SQL，...</div>
+                                   </a>
+                               </li>
+                          	
+                          		<li>
+                                   <a href="/detail.html?id=11">
+                                       <h3>负载均衡方案<一></h3>
+                                       <div class="r_img">
+                                           <img src="https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/181fa63b-ca70-4408-9824-75e4926c9eca1552567969398.image/png">
+                                       </div>
+                                       <div class="r_txt">一台普通服务器的处理能力是有限的，假如能达到每秒几万个到几十万个请求，但却无法在...</div>
+                                   </a>
+                               </li>
+                          	
+                          		<li>
+                                   <a href="/detail.html?id=2">
+                                       <h3>Dubbo实现原理的概述</h3>
+                                       <div class="r_img">
+                                           <img src="https://imgserver-1258736275.cos.ap-chengdu.myqcloud.com/bolgImg/9f0c0db2-66aa-48eb-b9e4-9823e5b992381551927977986.image/jpeg">
+                                       </div>
+                                       <div class="r_txt">Dubbo是阿里巴巴开源出来的一个分布式服务框架，致力于提供高性能和透明化的RP...</div>
+                                   </a>
+                               </li>
+                          	
+                        </ul>
+                    </div>
+                </div>
+                <div class="rbox" id="friend">
+                    <h2 class="title1">
+                        <span>友情链接</span>
+                    </h2>
+                    <ul>
+                        
+                     		 <li>
+                         		<a href="http://www.this1.cn/">微拎录</a>
+                     		 </li>
+                       
+                     		 <li>
+                         		<a href="http://hao.360.cn/">360导航</a>
+                     		 </li>
+                       
+                    </ul>
+                </div>
+                <div class="rbox" id="qrcode">
+                    <h2 class="title1">
+                        <span>打赏一下</span>
+                    </h2>
+                    <div class="q_img">
+                        <img src="http://www.this1.cn:8080/group1/M00/00/00/Co1zqVzrWiiAOhE3AADDmkZD1mw004.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    
+<footer id="footer">
+    <p>Copyright © 2019 , this1.cn, All Rights Reserved 备案号:蜀ICP备17000691号</p>
+</footer>
+<section id="toast" class="">
+
+</section>
+<div id="goTop" class="" title="回到顶部">
+    <i class="iconfont icon-huidingbu"></i>
+</div>
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+<script type="text/javascript">
+    (function() {
+        var s ="_fpffwq4n0n9";// "_" + Math.random().toString(36).slice(2);
+        document.write('<div style="" id="_fpffwq4n0n9"></div>');
+        (window.slotbydup = window.slotbydup || []).push({
+            id: "u3851593",
+            container:  s
+        });
+    })();
+</script>
+<!-- 多条广告如下脚本只需引入一次 -->
+<script type="text/javascript" src="//cpro.baidustatic.com/cpro/ui/cm.js" async="async" defer="defer" ></script>
+
+<script>
+(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?b96a0010f33821ca927c4af09263e671":"https://jspassport.ssl.qhimg.com/11.0.1.js?b96a0010f33821ca927c4af09263e671";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?60ab06b7e6e3873e27dc75c268d775c7";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+	<script src="js/main.js" id="scriptType"  page='question'></script>
+</body>
+</html>
+
+

@@ -1,0 +1,540 @@
+var config = {
+    URL: 'http://'+window.document.domain //配置请求域名
+}
+var myBlog = {
+    nowTimer: 0,//记录时间戳
+    setlectImgIndex: 1, //选择的头像下标
+    open: false,
+    serachOpen: false,
+    init: function (page) {
+        this.goTop();
+        window.addEventListener('scroll', this.userScroll);
+        if (page === 'home' || page === 'like' || page === 'comment' || page === 'message' || page === 'my' || page === 'question' || page === 'serachEnd') {
+            //调用分页逻辑
+            this.paging();
+        }
+        if (page === 'home') {
+            this.home();
+        } else if (page === 'comment') {
+            this.comment();
+        } else if (page === 'detail') {
+            if(document.querySelector('.btn').children[0]==undefined || document.querySelector('.btn').children[0]==null)return;
+            var newId = parseInt(document.querySelector('.btn').children[0].getAttribute('newsId'));
+            var likeObj = localStorage.getItem("likeObj" + newId);
+            if (likeObj != null && likeObj != 'null') {
+                //大于一天
+                var localData = JSON.parse(likeObj);
+                if ((new Date().getTime() - localData.time) / 1000 > 86400) {
+                    localStorage.setItem("likeObj" + newId, null);
+                } else {
+                    //设置不可以点击
+                    document.querySelector('.btn').children[0].setAttribute('class', 'disabled');
+                }
+            }
+        }
+        if (page == 'my') {
+            if(this.getQueryString('size')!=null){
+                var top = document.querySelector('#worksPos').offsetTop - 25;
+                window.scrollTo(0, top);
+            }
+        }
+        //请求示例
+        // this.httpRequest('', '', '', (data) => { 
+        //     console.log(data)
+        // });
+    },
+    serachEnter(value){
+        if (!event) event = window.event;
+        if ((event.keyCode || event.which) == 13) {
+           this.serach(value);
+        }
+    },
+    //打开搜索，移动端
+    serachBtnClick(obj) {
+        var parentNode = obj.parentNode;
+        var inputNode = parentNode.children[1].children[0];
+        if (!this.serachOpen) {
+            parentNode.children[1].setAttribute("class", "s_box active");
+            this.serachOpen = true;
+            setTimeout(function () {
+                inputNode.focus();
+            }, 100);
+        } else {
+            if (inputNode.value == '') {
+                var toast = document.querySelector('#toast');
+                toast.innerHTML = '请输入搜索内容~';
+                toast.setAttribute('class', 'active');
+                setTimeout(function () {
+                    toast.setAttribute('class', '');
+                    toast.innerHTML = '';
+                    inputNode.focus();
+                }, 1500);
+                return;
+            }
+            this.serach(inputNode.value);
+        }
+        console.log('提交搜索内容进行搜索')
+    },
+    //打开导航
+    openMenu(obj) {
+        this.open = !this.open;
+        if (this.open) {
+            document.querySelector('.mobile').setAttribute("class", "mobile active");
+            obj.setAttribute("class", "active");
+            document.body.style.overflow = "hidden";
+            document.body.style.height = "100vh";
+            document.addEventListener("touchmove", e => { }, false);
+        } else {
+            obj.setAttribute("class", "");
+            document.querySelector('.mobile').setAttribute("class", "mobile");
+            document.body.style.overflow = "";
+            document.body.style.height = "";
+            document.removeEventListener("touchmove", e => { }, false);
+        }
+    },
+    //首页的逻辑
+    home: function () {
+        //指定滚动条滚动到指定位置
+        var screenWidth = document.documentElement.clientWidth || document.body.clientWidth;
+        var slidesPerView = 4;
+        var space = 20;
+        if (screenWidth <= 1200 && screenWidth > 767) {
+            slidesPerView = 3;
+            space = 15;
+        } else if (screenWidth <= 767 && screenWidth > 590) {
+            slidesPerView = 2
+            space = 10;
+        } else if (screenWidth <= 590) {
+            slidesPerView = 2;
+            space = 10;
+        }
+        var swipers = new Swiper(".swiper-container", {
+            loop: false, // 循环模式选项
+            slidesPerView: slidesPerView,
+            spaceBetween: space,
+            observer: true,//修改swiper自己或子元素时，自动初始化swiper
+            observeParents: true,
+            initialSlide: 0,
+            speed: 1000,
+            autoplay: {
+                delay: 10000,
+                stopOnLastSlide: false,
+                disableOnInteraction: true
+            },
+            // // 如果需要前进后退按钮
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            on: {
+                slideChangeTransitionStart: () => { },
+                slideChangeTransitionEnd: () => { }
+            },
+        });
+        if(this.getQueryString('size')!=null){
+            var top = document.querySelector('#pageIndex').offsetTop - 25;
+            window.scrollTo(0, top);
+        }
+    },
+    //获取页面顶部的参数
+    getQueryString: function (name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    },
+    //搜索的逻辑
+    serach: function (val) {
+        if (val == '') {
+            var toast = document.querySelector('#toast');
+            toast.innerHTML = '请输入搜索内容~';
+            toast.setAttribute('class', 'active');
+            setTimeout(function () {
+                toast.setAttribute('class', '');
+                toast.innerHTML = '';
+            }, 1500);
+            return;
+        }
+        //提交搜索内容，跳转对应链接
+        /*this.httpRequest('/searchEnd.html?keyword='+val, 'GET', '', function (data) {
+        	
+        })*/
+        window.open("http://"+window.document.domain+"/searchEnd.html?keyword="+val);      
+        //window.location.href="/searchEnd.html?keyword="+val;
+
+    },
+    //公共回到顶部
+    goTop: function () {
+        document.querySelector('#goTop').addEventListener('click', () => {
+            var scrollToptimer = setInterval(function () {
+                var top = document.body.scrollTop || document.documentElement.scrollTop;
+                var speed = top / 4;
+                if (document.body.scrollTop != 0) {
+                    document.body.scrollTop -= speed;
+                } else {
+                    document.documentElement.scrollTop -= speed;
+                }
+                if (top == 0) {
+                    clearInterval(scrollToptimer);
+                }
+            }, 30);
+        })
+    },
+    //滚动方法
+    userScroll() {
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop > document.body.scrollHeight / 4) {
+            document.querySelector('#goTop').setAttribute('class', 'active');
+        } else {
+            //这个设置隐藏
+            document.querySelector('#goTop').setAttribute('class', '');
+        }
+    },
+    //讨论列表
+    comment: function () {
+        //处理一下定位的问题
+        //处理高度小于80px的，不给显示
+        var replayBox = document.querySelectorAll('.replay');
+        for (var i = 0; i < replayBox.length; ++i) {
+            var boxH = 0;
+            var replayp = replayBox[i].querySelectorAll('p');
+            for (var j = 0; j < replayp.length; ++j) {
+                boxH += replayp[j].offsetHeight;
+            }
+            if (boxH < 80) {
+                replayBox[i].style.height = boxH + 'px';
+                replayBox[i].style.paddingBottom = '0px';
+                replayBox[i].setAttribute('class', 'replay noMore');
+            }
+        }
+    },
+    //处理查看更多
+    showMore: function (obj) {
+        var parent = obj.parentNode;
+        var flag = parent.getAttribute('haveFlag');
+        var allH = 0;
+        var replayp = parent.querySelectorAll('p');
+        for (var j = 0; j < replayp.length; ++j) {
+            allH += replayp[j].offsetHeight;
+        }
+        if (flag == 0) {
+            parent.setAttribute('class', 'replay active');
+            obj.setAttribute('class', 'sayMore active');
+            obj.children[0].setAttribute('class', 'iconfont icon-z045');
+            parent.setAttribute('haveFlag', 1);
+            parent.style.height = allH + 'px';
+        } else {
+            parent.setAttribute('class', 'replay');
+            parent.setAttribute('haveFlag', 0);
+            obj.setAttribute('class', 'sayMore default');
+            obj.children[0].setAttribute('class', 'iconfont icon-z044');
+            parent.style.height = '80px';
+        }
+    },
+    //点赞
+    zan: function (obj) {
+        //判断
+        if (!(new Date().getTime() - this.nowTimer > 2000)) return;
+        else this.nowTimer = new Date().getTime();
+        var target = obj.parentNode;
+        var parentId = parseInt(target.parentNode.parentNode.getAttribute("commId"));
+        console.log('这是点赞的id', parentId)
+        //先移除所有的属性
+        for (var i = 0; i < target.children.length - 4; ++i) {
+            target.children[i].removeAttribute("style");
+        }
+        //给当前这个添加属性
+        for (var i = 0; i < target.children.length - 4; ++i) {
+            //闭包
+            (function (self, i) {
+                var random = self.returnRandom(1, 5);
+                setTimeout(() => {
+                    target.children[i].setAttribute(
+                        "class",
+                        `iconfont icon-xihuan active${random}`
+                    );
+                }, i * 50);
+            })(myBlog, i)
+        }
+        //ajax请求
+        //设置元素数据增加,下面代码最好等待接口返回后，在进行处理
+        // target.querySelector('#zan').innerHTML='('+(parseInt(target.querySelector('#zan').innerHTML.split('(')[1].split(')')[0])++)+')';
+        var nowZan = parseInt(target.querySelector('#zan').getAttribute('value'));
+        target.querySelector('#zan').innerHTML = '(' + (++nowZan) + ')';
+        target.querySelector('#zan').setAttribute('value', nowZan);
+    },
+    //返回随机整数
+    returnRandom(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    },
+    //显示因此回复框
+    showHideReplay: function (obj) {
+        var replay = obj.parentNode.parentNode.parentNode.children[2];
+        var show = replay.getAttribute('show');
+        var allReplay = document.querySelectorAll('.replayBox');
+        for (var i = 0; i < allReplay.length; ++i) {
+            allReplay[i].setAttribute('class', 'replayBox');
+        }
+        if (show == 0) {
+            replay.setAttribute('class', 'replayBox');
+            replay.setAttribute('show', 1);
+        } else {
+            replay.setAttribute('class', 'replayBox active');
+            replay.setAttribute('show', 0);
+        }
+    },
+    //选择头像
+    selectImg: function (obj) {
+        document.querySelectorAll('.i_img').forEach(function (item, index) {
+            item.setAttribute('class', 'i_img');
+        });
+        obj.setAttribute('class', 'i_img active');
+        this.setlectImgIndex = parseInt(obj.getAttribute('index'));
+    },
+    //提交子评论
+    submitComment: function (obj, type) {
+        var commId = obj.parentNode.parentNode.getAttribute('commId');//获取类型id
+        var userName = '';
+        var userCon = '';
+        if (type == 1) {
+            userName = obj.parentNode.children[1].value;
+            userCon = obj.parentNode.children[0].value;
+        } else {
+            userName = obj.parentNode.children[1].children[1].value;
+            userCon = obj.parentNode.children[0].children[1].value;
+        }
+        if (userCon == '') {
+            var toast = document.querySelector('#toast');
+            toast.innerHTML = type == 1 ? '请输入评论内容~' : '请输入昵称~';
+            toast.setAttribute('class', 'active');
+            setTimeout(function () {
+                toast.setAttribute('class', '');
+                toast.innerHTML = '';
+            }, 1500);
+            return;
+        }
+        if (userName == '') {
+            var toast = document.querySelector('#toast');
+            toast.innerHTML = type == 1 ? '请输入昵称~' : '请输入评论内容~';
+            toast.setAttribute('class', 'active');
+            setTimeout(function () {
+                toast.setAttribute('class', '');
+                toast.innerHTML = '';
+            }, 1500);
+            return;
+        }
+        console.log('验证通过，提交内容!', commId + '~~~~~~' + userName + '~~~~~~~~~' + userCon);
+        if (type == 1) {
+        	var commentSubText={};
+        	commentSubText.commenttextId=commId;
+        	commentSubText.message=userCon;
+        	commentSubText.nickname=userName;
+            this.httpRequest('/addCommentSub.action', 'POST', JSON.stringify(commentSubText) , function (data) {
+            	window.location.reload();
+            });
+        } else {
+        	 var commentText={};
+             commentText.bolgtextId=commId;
+             commentText.message=userCon;
+             commentText.nickname=userName;
+             this.httpRequest('/addComment.action', 'POST', JSON.stringify(commentText) , function (data) {
+            	 window.location.reload();
+             });
+        }
+    },
+    //提交留言
+    submitMessage: function (obj) {
+        var boxZone = obj.parentNode.querySelector('.y_box');
+        var userName = boxZone.querySelector('input').value;
+        var userCon = boxZone.querySelector('textarea').value;
+        if (userName == '') {
+            var toast = document.querySelector('#toast');
+            toast.innerHTML = '请输入昵称~';
+            toast.setAttribute('class', 'active');
+            setTimeout(function () {
+                toast.setAttribute('class', '');
+                toast.innerHTML = '';
+            }, 1500);
+            return;
+        }
+        if (userCon == '') {
+            var toast = document.querySelector('#toast');
+            toast.innerHTML = '请输入评论内容~';
+            toast.setAttribute('class', 'active');
+            setTimeout(function () {
+                toast.setAttribute('class', '');
+                toast.innerHTML = '';
+            }, 1500);
+            return;
+        }
+        var leaveMessage={};
+        leaveMessage.headurl=this.setlectImgIndex;
+        leaveMessage.leavemes=userCon;
+        leaveMessage.nickname=userName;
+        this.httpRequest('/addleaveMessage.action', 'POST', JSON.stringify(leaveMessage) , function (data) {
+        });
+        //console.log('提交留言:' + this.setlectImgIndex + '~~~~' + userName + '~~~~~~~' + userCon)
+    },
+    //详情页面点赞
+    kissMe(obj , id) {
+        var newId = parseInt(obj.getAttribute('newsId'));
+        var span = obj.querySelector('span');
+        var nowLikeNum = parseInt(span.innerHTML);
+        var likeObj = localStorage.getItem("likeObj" + newId);
+        if (likeObj != null && likeObj != 'null') {
+            //大于一天
+            var localData = JSON.parse(likeObj);
+            if ((new Date().getTime() - localData.time) / 1000 > 86400) {
+                localStorage.setItem("likeObj" + newId, null);
+            } else {
+                //设置不可以点击
+                obj.setAttribute('class', 'disabled');
+            }
+        } else {
+            var target = obj.querySelector(".heart");
+            target.setAttribute("class", "heart active");
+            obj.setAttribute('class', 'disabled');
+            var obj = {};
+            obj.time = new Date().getTime();
+            obj.lickNum = nowLikeNum + 1;
+            obj.id = newId;
+            span.innerHTML = nowLikeNum + 1;
+            localStorage.setItem("likeObj" + newId, JSON.stringify(obj));
+            //设置成功，提交喜欢数据
+            this.httpRequest('/updatelickNum.action?id='+id, 'GET', '', function (data) {
+            	
+            });
+        }
+    }
+    ,
+    //详情页面评论
+    detailComment: function (obj) {
+        var newsId = obj.parentNode.getAttribute('newsId');
+        var userName = obj.parentNode.querySelector('input').value;
+        var userCon = obj.parentNode.querySelector('textarea').value;
+        if (userName == '') {
+            var toast = document.querySelector('#toast');
+            toast.innerHTML = '请输入昵称~';
+            toast.setAttribute('class', 'active');
+            setTimeout(function () {
+                toast.setAttribute('class', '');
+                toast.innerHTML = '';
+            }, 1500);
+            return;
+        }
+        if (userCon == '') {
+            var toast = document.querySelector('#toast');
+            toast.innerHTML = '请输入评论内容~';
+            toast.setAttribute('class', 'active');
+            setTimeout(function () {
+                toast.setAttribute('class', '');
+                toast.innerHTML = '';
+            }, 1500);
+            return;
+        }
+        
+        var commentText={};
+        commentText.bolgtextId=newsId;
+        commentText.message=userCon;
+        commentText.nickname=userName;
+        
+        
+        obj.parentNode.querySelector('input').value = '';
+        obj.parentNode.querySelector('textarea').value = '';
+        this.httpRequest('/addComment.action', 'POST', JSON.stringify(commentText), function (data) {
+        	console.log(11);
+            //将数据添加到页面
+            var ul = document.querySelector('.left .l_two1 .userList ul');
+            var timeNow = new Date();
+            var ul = document.querySelector('.left .l_two1 .userList ul');
+            var b = document.querySelector('#detail .userList .userSend b');
+            if(b.innerHTML == '0')document.querySelector('#detail .userList .userSend .allMessage').setAttribute('href','/comment/'+newsId+'.html');
+            b.innerHTML = parseInt(b.innerHTML)+1;
+            var timeNow = new Date();
+            var li = document.createElement('li');
+            var h3 = document.createElement('h3');
+            var span = document.createElement('span');
+            var p = document.createElement('p');
+            h3.innerHTML = userName;
+            span.innerHTML = timeNow.getFullYear() + '-' + ((timeNow.getMonth() + 1) > 9 ? (timeNow.getMonth() + 1) : '0' + (timeNow.getMonth() + 1)) + '-' + (timeNow.getDate() > 9 ? timeNow.getDate() : '0' + timeNow.getDate());
+            p.innerHTML = userCon;
+            h3.appendChild(span);
+            li.appendChild(h3);
+            li.appendChild(p);
+            if (ul == null) {
+                var ulTag = document.createElement('ul');
+                ulTag.prepend(li);
+                document.querySelector('.left .l_two1 .userList').prepend(ulTag);
+                document.querySelector('.noUser').style.display = 'none';
+            } else {
+                ul.prepend(li);
+            }
+            var toast = document.querySelector('#toast');
+            toast.innerHTML = '评论成功~';
+            toast.setAttribute('class', 'active');
+            setTimeout(function () {
+                toast.setAttribute('class', '');
+                toast.innerHTML = '';
+            }, 1500);
+        });
+    },
+    httpRequest: function (url, method, data, callback) {
+        if (url == '' || url == undefined || typeof url !== 'string') { console.error('URL is not empty or a string！'); return }
+        if (method == '' || method == undefined) method = 'GET';
+        if (data == undefined) data = '';
+        if (!callback || typeof callback !== 'function') { console.error('callback is not empty！'); return }
+        var request = new XMLHttpRequest();
+
+        request.open(method, config.URL + url);
+        request.setRequestHeader("Content-Type","application/json; charset=utf-8");
+        request.onreadystatechange = function () {
+            if (request.readyState !== 4) return;
+            //请求成功
+            if (request.status === 200) {
+                callback(JSON.parse(request.responseText));
+            }
+        }
+        if (method === 'GET') request.send(null);
+        else request.send(data);
+    },
+  //分页
+    paging: function (keyword ) {
+        //默认的页面
+        var pageNow = this.getQueryString('size');//获取当前index
+        //var keyword = this.getQueryString('keyword');
+        var aList = document.querySelectorAll('#page a');
+        var pageIndex=1;
+        if(pageNow!=null)pageIndex=parseInt(pageNow);
+        //默认设置第一个
+        if (pageNow == null || pageNow == 1) {
+            aList[0].setAttribute('class', 'disabled');
+            aList[0].setAttribute('href', 'javascript:void(0);');
+            aList[1].setAttribute('class', 'active');
+        } else {
+            aList[pageNow].setAttribute('class', 'active');
+            aList[0].setAttribute('class', '');
+            if(keyword!=null || keyword == ""){
+            	 aList[0].setAttribute('href', window.location.href.split("?")[0]+'?keyword='+decodeURIComponent(decodeURIComponent(keyword))+'&size='+(pageIndex-1)+'');
+            }else{
+            	 aList[0].setAttribute('href', window.location.href.split("?")[0]+'?size='+(pageIndex-1)+'');
+            }
+           
+        }
+        //默认设置最后一个
+        if (pageNow == aList.length - 2) {
+            aList[aList.length - 1].setAttribute('class', 'disabled');
+            aList[aList.length - 1].setAttribute('href', 'javascript:void(0);');
+        }else{
+            aList[aList.length - 1].setAttribute('class', '');
+            if(keyword!=null || keyword == ""){
+           	 aList[0].setAttribute('href', window.location.href.split("?")[0]+'?keyword='+decodeURIComponent(decodeURIComponent(keyword))+'&size='+(pageIndex-1)+'');
+           }else{
+           	 aList[0].setAttribute('href', window.location.href.split("?")[0]+'?size='+(pageIndex-1)+'');
+           }
+            //aList[aList.length - 1].setAttribute('href',  window.location.href.split("?")[0]+'?size='+(pageIndex+1)+'');
+        }
+    }
+}
+window.onload = function () {
+    myBlog.init(document.querySelector('#scriptType').getAttribute('page'));
+}
